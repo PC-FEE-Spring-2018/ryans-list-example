@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  {{>styles}}
+</head>
+<body>
+  <div id="container">
+    <h1>Ryan's List</h1>
+    <form action="/add-post" method="post">
+      <input type="hidden" name="slug" value="{{slug}}" />
+      <input type="text" name="name" placeholder="Post Name" />
+      <textarea placeholder="Post Description" name="description"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

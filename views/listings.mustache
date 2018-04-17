@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  {{>styles}}
+</head>
+<body>
+  <div id="container">
+    <h1>Ryan's List</h1>
+    <div id="add">
+      <a href="/create-post/{{categoryslug}}">Post on Ryan's List</a>
+    </div>
+    <div id="posts">
+      <ul class="{{view}}">
+        {{#posts}}
+          <li><a href="/view-post/{{slug}}"><img src="http://placehold.it/300/300" /><span>{{name}}</span></a></li>
+        {{/posts}}
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  {{>styles}}
+</head>
+<body>
+  <div id="container">
+    <a href="/logout">Logout</a>
+    <h1>Ryan's List</h1>
+    <div id="categories">
+      {{#cats}}
+        <div>
+          <h4><a href="/{{slug}}">{{name}}</a></h4>
+          <ul>
+          {{#children}}
+            <li><a href="/{{slug}}">{{name}}</a></li>
+          {{/children}}
+          </ul>
+        </div>
+      {{/cats}}
+    </div>
+  </div>
+</body>
+</html>
